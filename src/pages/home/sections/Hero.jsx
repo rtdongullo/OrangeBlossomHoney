@@ -5,7 +5,6 @@ const Hero = () => {
   return (
     <div id="home" className="p-6 flex justify-center items-center align-middle h-[100vh] border-b-2">
       <video
-        controls preload="auto"
         autoPlay
         loop
         muted
