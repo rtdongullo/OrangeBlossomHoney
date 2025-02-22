@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Hexagon from "../../../components/Hexagon";
+
 
 const AboutProduct = () => {
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        } else {
+          setInView(false);
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the section is visible
+      }
+    );
+    const aboutSection = document.getElementById("aboutProducts");
+    observer.observe(aboutSection);
+  }, []);
+
   return (
-    <div className="p-6 flex justify-center items-center align-middle h-[60vh] border-b-2">
-      <h4 className="text-4xl font-bold">
-        About the Products and / or Services
-      </h4>
+    <div
+      id="aboutProducts"
+      className="p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-[90vh] border-b-2"
+    >
+      {/* Honeycomb Section */}
+      <div
+        className={`honeycomb-container lg:w-1/2 ${inView ? "active" : ""}`}
+      >
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Hexagon key={index} index={index} />
+        ))}
+      </div>
+
+      {/* Write-up Section */}
+      <div className="lg:w-1/2 p-4">
+        <h4 className="text-4xl font-bold mb-4">About the Products</h4>
+        <p className="text-lg">
+          Honey has been a staple in natural remedies and culinary delights for centuries. Our honey is
+          sourced from the finest flowers, providing a rich, pure taste that you can enjoy in your tea, on
+          toast, or straight from the jar. Learn more about the benefits and origins of our honey in this section!
+        </p>
+      </div>
+
+
     </div>
   );
 };

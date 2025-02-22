@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+/* The container for the honeycomb */
+.honeycomb-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  
+  .honeycomb-container.active {
+    opacity: 1; /* Fade-in effect when the section is in view */
+  }
+  
+  /* Basic styles for the hexagon shape */
+  .hexagon {
+    width: 100px;
+    height: 58px;
+    background-color: #f1c40f;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: translateY(50px); /* Initial position, off-screen */
+    transition: transform 1s ease-out;
+  }
+  
+  /* Apply animation to slide hexagons into view */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px); /* Off-screen position */
+    }
+    100% {
+      transform: translateY(0); /* Final position */
+    }
+  }
+  
+  .hexagon.animate-slideIn {
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  /* Add staggered delay based on index */
+  .hexagon.animate-slideIn:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .hexagon.animate-slideIn:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .hexagon.animate-slideIn:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .hexagon.animate-slideIn:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .hexagon.animate-slideIn:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
