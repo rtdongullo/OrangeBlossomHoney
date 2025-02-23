@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Hexagon from "../../../components/Hexagon";
+import combOne from "../../../assets/combOne.jpg";
+import combTwo from "../../../assets/combTwo.jpg";
+import combFour from "../../../assets/combFour.jpg";
+import combThree from "../../../assets/combThree.jpg"
 
+const imageSources = [combOne, combTwo, combFour, combThree
+];
 
 const AboutProduct = () => {
   const [inView, setInView] = useState(false);
@@ -25,14 +31,12 @@ const AboutProduct = () => {
   return (
     <div
       id="aboutProducts"
-      className="p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-[90vh] border-b-2"
+      className="p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[90vh] border-b-2"
     >
       {/* Honeycomb Section */}
-      <div
-        className={`honeycomb-container lg:w-1/2 ${inView ? "active" : ""}`}
-      >
-        {Array.from({ length: 5 }).map((_, index) => (
-          <Hexagon key={index} index={index} />
+      <div className={`honeycomb-container lg:w-1/2 ${inView ? "active" : ""}`}>
+        {imageSources.map((src, index) => (
+          <Hexagon key={index} index={index} imageSrc={src} />
         ))}
       </div>
 
@@ -45,8 +49,6 @@ const AboutProduct = () => {
           toast, or straight from the jar. Learn more about the benefits and origins of our honey in this section!
         </p>
       </div>
-
-
     </div>
   );
 };
