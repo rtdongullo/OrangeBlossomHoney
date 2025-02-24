@@ -1,37 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import Hexagon from "../../../components/Hexagon";
 import combOne from "../../../assets/combOne.jpg";
 import combTwo from "../../../assets/combTwo.jpg";
 import combFour from "../../../assets/combFour.jpg";
-import combThree from "../../../assets/combThree.jpg"
+import combThree from "../../../assets/combThree.jpg";
 
-const imageSources = [combOne, combTwo, combFour, combThree
-];
+const imageSources = [combOne, combTwo, combFour, combThree];
 
 const AboutProduct = () => {
   const [inView, setInView] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        } else {
-          setInView(false);
-        }
+        setInView(entry.isIntersecting);
       },
-      {
-        threshold: 0.5, // Trigger when 50% of the section is visible
-      }
+      { threshold: 0.5 }
     );
-    const aboutSection = document.getElementById("aboutProducts");
-    observer.observe(aboutSection);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
   }, []);
 
   return (
-    <div
+    <motion.div
+      ref={ref}
       id="aboutProducts"
-      className="p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[90vh] border-b-2"
+      className="p-6 flex flex-col lg:flex-row bg-yellow-100 justify-center items-center align-middle h-auto lg:h-[90vh] border-b-2"
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1.2, ease: "easeOut" }}
     >
       {/* Honeycomb Section */}
       <div className={`honeycomb-container lg:w-1/2 ${inView ? "active" : ""}`}>
@@ -41,15 +48,20 @@ const AboutProduct = () => {
       </div>
 
       {/* Write-up Section */}
-      <div className="lg:w-1/2 p-4">
+      <motion.div
+        className="lg:w-1/2 p-4"
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
         <h4 className="text-4xl font-bold mb-4">About the Products</h4>
         <p className="text-lg">
           Honey has been a staple in natural remedies and culinary delights for centuries. Our honey is
           sourced from the finest flowers, providing a rich, pure taste that you can enjoy in your tea, on
           toast, or straight from the jar. Learn more about the benefits and origins of our honey in this section!
         </p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
