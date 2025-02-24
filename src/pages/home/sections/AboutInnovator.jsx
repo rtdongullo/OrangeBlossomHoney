@@ -41,7 +41,7 @@ const AboutInnovator = () => {
           variants={imageVariants}
         >
           <div className="w-full sm:w-[300px] md:w-[500px] lg:w-[450px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] 
-        border-4 border-yellow-600 rounded-lg overflow-hidden relative flex justify-center items-center">
+        border-4 border-[#2D1B0F] rounded-lg overflow-hidden relative flex justify-center items-center">
             <img 
               src={AboutIn} 
               alt="About Us Section Image" 
@@ -56,7 +56,7 @@ const AboutInnovator = () => {
 
         {/* Name Card */}
         <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[85%] text-center">
-          <span className="text-xl md:text-2xl font-bold text-black">Winnie Abena Anhwere Anim</span>
+          <span className="text-xl md:text-2xl font-serif tracking-wide font-bold text-[#2D1B0F]">Winnie Abena Anhwere Anim</span>
         </div>
 
         {/* Description Card */}

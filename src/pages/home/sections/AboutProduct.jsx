@@ -54,12 +54,13 @@ const AboutProduct = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h4 className="text-4xl font-bold mb-4">About the Products</h4>
+        <h4 className="text-4xl font-serif tracking-wide text-[#2D1B0F] font-bold mb-4">About the Products</h4>
         <p className="text-lg">
           Honey has been a staple in natural remedies and culinary delights for centuries. Our honey is
           sourced from the finest flowers, providing a rich, pure taste that you can enjoy in your tea, on
           toast, or straight from the jar. Learn more about the benefits and origins of our honey in this section!
         </p>
+        <h3 className="text-xl font-serif tracking-wide text-[#2D1B0F] font-bold mb-4">Socials</h3>
       </motion.div>
     </motion.div>
   );

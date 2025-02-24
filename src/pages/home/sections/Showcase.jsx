@@ -61,12 +61,12 @@ const Showcase = () => {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
-      <h4 className="text-4xl font-bold text-brown-800 mb-8">Product Showcase</h4>
+      <h4 className="text-4xl font-serif tracking-wide font-bold text-[#2D1B0F] mb-8">Product Showcase</h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {products.map((product) => (
           <motion.div
             key={product.id}
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-4 flex flex-col items-center border border-yellow-500"
+            className="bg-white shadow-lg rounded-lg overflow-hidden p-4 flex flex-col items-center border border-[#2D1B0F]"
             variants={cardVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -78,7 +78,7 @@ const Showcase = () => {
             />
             <h5 className="text-xl font-bold text-brown-900">{product.name}</h5>
             <p className="text-green-700 text-lg font-semibold">{product.price}</p>
-            <button className="mt-4 bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition-all">
+            <button className="mt-4 bg-yellow-500 text-[#2D1B0F] font-bold px-6 py-2 rounded-lg hover:bg-yellow-600 transition-all">
               Add to Cart
             </button>
           </motion.div>
