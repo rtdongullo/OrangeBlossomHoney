@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import CombTwo from "../../../assets/combTwo.jpg";
 import CombThree from "../../../assets/combThree.jpg";
-import CombOne from "../../../assets/combOne.JPG";
+import CombOne from "../../../assets/combOne.jpg";
 
 const products = [
   { id: 1, name: "Organic Honey", price: "₵50", image: CombTwo },
