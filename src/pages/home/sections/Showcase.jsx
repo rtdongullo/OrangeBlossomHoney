@@ -56,7 +56,7 @@ const Showcase = () => {
     <motion.div
       ref={ref}
       id="gallery"
-      className="p-8 flex flex-col items-center bg-yellow-100 min-h-[70vh] border-b-2"
+      className="p-8 flex flex-col items-center bg-yellow-100 min-h-[70vh]"
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1.5, ease: "easeOut" }}

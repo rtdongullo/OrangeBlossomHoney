@@ -31,7 +31,7 @@ const AboutInnovator = () => {
   };
 
   return (
-    <div id="aboutInnovator" className="p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh] border-b-2">
+    <div id="aboutInnovator" className="bg-[#f4f1e7] p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh]">
       
       {/* Image Section */}
       <div className="w-full lg:w-1/2 p-4 flex justify-center items-center">
