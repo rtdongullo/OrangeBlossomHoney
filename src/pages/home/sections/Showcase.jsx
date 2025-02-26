@@ -25,7 +25,7 @@ const Showcase = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setInView(true); // Force animation to show on mobile
+        setInView(true);
       }
     };
 
@@ -33,14 +33,13 @@ const Showcase = () => {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.2 } 
+      { threshold: 0.2 }
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    // Check screen size on mount
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -53,15 +52,16 @@ const Showcase = () => {
   }, []);
 
   return (
-    <motion.div
-      ref={ref}
-      id="gallery"
-      className="p-8 flex flex-col items-center bg-yellow-100 min-h-[70vh]"
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1.5, ease: "easeOut" }}
-    >
-      <h4 className="text-4xl font-serif tracking-wide font-bold text-[#2D1B0F] mb-8">Product Showcase</h4>
+    <div ref={ref} id="gallery" className="p-8 flex flex-col items-center bg-yellow-100 min-h-[70vh]">
+      <motion.h4
+        className="text-4xl font-serif tracking-wide font-bold text-[#2D1B0F] mb-8"
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
+        Product Showcase
+      </motion.h4>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {products.map((product) => (
           <motion.div
@@ -84,7 +84,7 @@ const Showcase = () => {
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

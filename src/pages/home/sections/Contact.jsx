@@ -25,14 +25,14 @@ const Contact = () => {
               <img 
                 src={InstaLogo} 
                 alt="Instagram" 
-                className="w-11 h-11 transition-transform duration-300 hover:scale-110 hover:opacity-80"
+                className="w-12 h-12 -mt-1 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
             </a>
             <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
               <img 
                 src={XLogo} 
                 alt="Twitter (X)" 
-                className="w-14 h-14 transition-transform duration-300 hover:scale-110 hover:opacity-80"
+                className="w-10 h-10 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
             </a>
             <a href="https://web.facebook.com" target="_blank" rel="noopener noreferrer">

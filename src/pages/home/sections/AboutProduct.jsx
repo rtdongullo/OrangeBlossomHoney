@@ -32,9 +32,7 @@ const AboutProduct = () => {
   }, []);
 
   return (
-    // Static Background Wrapper
     <div id="aboutProducts" className="p-6 bg-yellow-100 h-auto lg:h-[90vh] flex justify-center items-center">
-      {/* Animated Content */}
       <motion.div
         ref={ref}
         className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl"
@@ -42,19 +40,14 @@ const AboutProduct = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        {/* Honeycomb Section */}
-        <motion.div
-          className="honeycomb-container lg:w-1/2 min-h-[300px] flex justify-center items-center flex-wrap"
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        >
+        {/* Honeycomb Section - Static */}
+        <div className="honeycomb-container lg:w-1/2 min-h-[300px] flex justify-center items-center flex-wrap">
           {imageSources.map((src, index) => (
             <Hexagon key={index} index={index} imageSrc={src} />
           ))}
-        </motion.div>
+        </div>
 
-        {/* Write-up Section */}
+        {/* Write-up Section - Animated */}
         <motion.div
           className="lg:w-1/2 p-4"
           initial={{ opacity: 0, y: 50 }}
