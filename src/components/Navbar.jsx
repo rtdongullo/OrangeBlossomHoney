@@ -12,11 +12,11 @@ const Navbar = () => {
       
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex space-x-6">
-        <Link to="home" smooth={true} duration={500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Home</Link>
-        <Link to="aboutProducts" smooth={true} duration={500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Products</Link>
-        <Link to="aboutInnovator" smooth={true} duration={500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Innovator</Link>
-        <Link to="gallery" smooth={true} duration={500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Gallery</Link>
-        <Link to="contactUs" smooth={true} duration={500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Contact</Link>
+        <Link to="home" smooth={true} duration={2500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Home</Link>
+        <Link to="aboutProducts" smooth={true} duration={2500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Products</Link>
+        <Link to="aboutInnovator" smooth={true} duration={2500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Innovator</Link>
+        <Link to="gallery" smooth={true} duration={2500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Gallery</Link>
+        <Link to="contactUs" smooth={true} duration={2500} className="hover:text-yellow-400 font-serif tracking-wide font-bold text-white cursor-pointer">Contact</Link>
       </div>
       
       {/* Shop Button (Desktop & Mobile) */}

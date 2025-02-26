@@ -14,10 +14,10 @@ const Contact = () => {
         
         {/* Contact Information */}
         <div className="bg-white shadow-md p-6 rounded-lg flex-1">
-          <h3 className="text-2xl font-semibold text-[#2D1B0F] mb-4">Contact Details</h3>
-          <p className="text-lg text-gray-700"><strong>Phone:</strong> +233 0123456</p>
-          <p className="text-lg text-gray-700"><strong>Email:</strong> lifestylehoney@gmail.com</p>
-          <p className="text-lg text-gray-700"><strong>Address:</strong> Kotokraba Market Ave, Cape Coast</p>
+          <h3 className="text-2xl font-serif tracking-wide font-medium text-[#2D1B0F] mb-4">Contact Details</h3>
+          <p className="text-lg text-gray-700"><strong>Phone:</strong> 024 765 3987</p>
+          <p className="text-lg text-gray-700"><strong>Email:</strong> lifestylemarket20@gmail.com</p>
+          <p className="text-lg text-gray-700"><strong>Address:</strong> Efutu Jukwa Road, Cape Coast</p>
           
           {/* Social Media Icons */}
           <div className="mt-6 flex gap-4 justify-center">
@@ -35,7 +35,7 @@ const Contact = () => {
                 className="w-10 h-10 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
             </a>
-            <a href="https://web.facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://web.facebook.com/profile.php?id=61573658722495" target="_blank" rel="noopener noreferrer">
               <img 
                 src={FacebookLogo} 
                 alt="Facebook" 
@@ -50,11 +50,25 @@ const Contact = () => {
               />
             </a>
           </div>
+
+          {/* AyekooMart Store Link */}
+          <div className="mt-6 text-center">
+            <p className="text-lg font-semibold text-red-600 mb-2 animate-pulse">We're on AyekooMart!</p>
+            <a 
+              href="https://lifestyle.ayekoomart.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-yellow-500 text-[#2D1B0F] font-bold py-2 px-6 rounded-md transition-all duration-300 hover:bg-yellow-600 hover:scale-105"
+            >
+              Visit Us
+            </a>
+          </div>
+
         </div>
 
         {/* Contact Form */}
         <div className="bg-white shadow-md p-6 rounded-lg flex-1">
-          <h3 className="text-2xl font-semibold text-[#2D1B0F] mb-4">Send Us a Message</h3>
+          <h3 className="text-2xl font-serif tracking-wide font-medium text-[#2D1B0F] mb-4">Send Us a Message</h3>
           <form className="flex flex-col gap-4">
             <input type="text" placeholder="Your Name" className="p-3 border rounded-md" />
             <input type="email" placeholder="Your Email" className="p-3 border rounded-md" />
