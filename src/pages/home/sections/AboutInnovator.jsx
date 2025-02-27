@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import AboutIn from "../../../assets/aboutIn.jpg";
+// import AboutIn from "../../../assets/aboutIn.jpg";
+import ImgAbena from "../../../assets/imgAbena.webp"
 import { motion } from "framer-motion";
 
 const AboutInnovator = () => {
@@ -43,7 +44,7 @@ const AboutInnovator = () => {
           <div className="w-full sm:w-[300px] md:w-[500px] lg:w-[450px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] 
         border-4 border-[#2D1B0F] rounded-lg overflow-hidden relative flex justify-center items-center">
             <img 
-              src={AboutIn} 
+              src={ImgAbena} 
               alt="About Us Section Image" 
               className="object-cover w-full h-full hover:scale-110 transition-all duration-300" 
             />

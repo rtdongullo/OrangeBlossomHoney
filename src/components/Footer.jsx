@@ -65,7 +65,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="border-t border-gray-700 mt-6 pt-4 text-center text-gray-400 text-sm">
-        &copy; {new Date().getFullYear()} Lifestyle Honey.
+        &copy; {new Date().getFullYear()} Lifestyle Honey. All Rights Reserved.
       </div>
     </footer>
   );

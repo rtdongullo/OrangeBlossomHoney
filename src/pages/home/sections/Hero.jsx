@@ -33,7 +33,7 @@ const Hero = () => {
             href="https://paystack.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-400 text-[#2D1B0F] font-semibold text-lg sm:text-xl px-6 py-3 rounded-lg transition-transform transform hover:scale-105 hover:bg-yellow-100"
+            className="inline-block bg-yellow-400 text-[#2D1B0F] font-semibold text-lg lg:text-xl md:text-sm sm:text-xs px-6 py-3 rounded-lg transition-transform transform hover:scale-105 hover:bg-yellow-100"
             whileHover={{ scale: 1.1 }}
           >
             Shop Now
