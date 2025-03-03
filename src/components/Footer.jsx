@@ -41,7 +41,7 @@ const Footer = () => {
           <h3 className="text-yellow-500 text-lg font-serif tracking-wide font-medium mb-3">Follow Us</h3>
           <div className="flex space-x-4">
 
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/lifestylehoney1?igsh=OGN4Zmg2c2kwMWNi" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded-full bg-white text-[#2D1B0F] hover:bg-yellow-400 transition-transform duration-300 hover:scale-110 hover:opacity-80">
               <FaInstagram size={18} />
             </a>

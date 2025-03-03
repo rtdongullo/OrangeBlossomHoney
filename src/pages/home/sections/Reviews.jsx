@@ -37,7 +37,7 @@ const Reviews = () => {
   };
 
   return (
-    <div id="reviews" className="bg-[#f4f1e7] p-6 flex flex-col items-center h-auto min-h-[60vh]">
+    <div id="reviews" className="bg-yellow-100 p-6 flex flex-col items-center h-auto min-h-[60vh]">
       <h4 className="text-4xl font-serif tracking-wide text-[#2D1B0F] font-bold mb-6">
         Customer Reviews
       </h4>

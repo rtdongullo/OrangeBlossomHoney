@@ -21,7 +21,7 @@ const Contact = () => {
           
           {/* Social Media Icons */}
           <div className="mt-6 flex gap-4 justify-center">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/lifestylehoney1?igsh=OGN4Zmg2c2kwMWNi" target="_blank" rel="noopener noreferrer">
               <img 
                 src={InstaLogo} 
                 alt="Instagram" 

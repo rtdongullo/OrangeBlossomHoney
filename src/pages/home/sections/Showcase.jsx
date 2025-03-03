@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react"; 
 import { motion } from "framer-motion";
 import CombTwo from "../../../assets/combTwo.jpg";
 import CombThree from "../../../assets/combThree.jpg";
@@ -9,8 +9,6 @@ const products = [
   { id: 2, name: "Lemon Flavor Honey", price: "₵65", image: CombOne },
   { id: 3, name: "Orange Blossom Honey", price: "₵70", image: CombThree },
   { id: 4, name: "Organic Honey", price: "₵50", image: CombTwo },
-  { id: 5, name: "Lemon Flavor Honey", price: "₵65", image: CombOne },
-  { id: 6, name: "Orange Blossom Honey", price: "₵70", image: CombThree },
 ];
 
 const cardVariants = {
@@ -23,31 +21,15 @@ const Showcase = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setInView(true);
-      }
-    };
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
+      ([entry]) => setInView(entry.isIntersecting),
       { threshold: 0.2 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    if (ref.current) observer.observe(ref.current);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-      window.removeEventListener("resize", handleResize);
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, []);
 
@@ -62,11 +44,13 @@ const Showcase = () => {
         Product Showcase
       </motion.h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+     
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
         {products.map((product) => (
           <motion.div
             key={product.id}
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-4 flex flex-col items-center border border-[#2D1B0F]"
+            className="bg-white shadow-lg rounded-2xl overflow-hidden p-4 flex flex-col items-center border border-[#2D1B0F] 
+            transition-all duration-300 hover:shadow-2xl hover:scale-105"
             variants={cardVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -74,15 +58,16 @@ const Showcase = () => {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-52 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
+              className="w-[300px] h-[200px] object-cover rounded-xl mb-4"
             />
-            <h5 className="text-xl font-bold text-brown-900">{product.name}</h5>
-            <p className="text-green-700 text-lg font-semibold">{product.price}</p>
+            <h5 className="text-lg font-semibold text-[#5D4037]">{product.name}</h5>
+            <p className="text-green-700 text-lg font-bold">{product.price}</p>
             <a
               href="https://paystack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 mt-2 bg-yellow-500 text-[#5D4037] font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-yellow-600 hover:scale-105"
+              className="px-4 py-2 mt-2 bg-yellow-500 text-[#5D4037] font-semibold rounded-lg shadow-md 
+              hover:bg-yellow-600 transition-all duration-300"
             >
               Buy
             </a>

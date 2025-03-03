@@ -8,19 +8,18 @@
   row-gap: 8px;
   justify-items: center;
   place-content: center;
-  opacity: 1; /* Ensure it is visible */
+  opacity: 1; 
 }
 
 @media (min-width: 768px) {
   .honeycomb-container {
     gap: 8px 0px;
-    /* Increase column-gap for better spacing */
   }
 }
 
 @media (min-width: 1024px) {
   .honeycomb-container {
-      gap: 8px 8px; /* More spacing between hexagons */
+      gap: 8px 8px; 
   }
 }
 
@@ -36,8 +35,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: translateY(0); /* Ensure no unwanted shift */
-  transition: none; /* Remove animation effects */
+  transform: translateY(0); 
+  transition: none; 
 }
 
 .hexagon img {
@@ -45,6 +44,20 @@
   height: 100%;
   object-fit: cover;
   position: absolute;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #facc15; 
+}
+
+.nav-link.active {
+  color: #facc15; 
+  border-bottom: 2px solid #facc15;
 }
 
 
