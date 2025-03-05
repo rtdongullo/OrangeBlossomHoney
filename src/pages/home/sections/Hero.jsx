@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="flex justify-center space-x-4 mt-4 sm:mt-6">
           {/* Shop Now Button */}
           <motion.a
-            href="https://paystack.com"
+            href="https://paystack.shop/lifestyle-honey"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-yellow-400 text-[#2D1B0F] font-semibold text-lg lg:text-xl md:text-sm sm:text-xs px-6 py-3 rounded-lg transition-transform transform hover:scale-105 hover:bg-yellow-100"

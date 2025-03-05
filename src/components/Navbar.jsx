@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
       
       
-      <a href="https://paystack.com" target="_blank" rel="noopener noreferrer"
+      <a href="https://paystack.shop/lifestyle-honey" target="_blank" rel="noopener noreferrer"
         className="px-5 py-2 bg-yellow-500 text-[#5D4037] font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-yellow-600 hover:scale-105">
         Shop
       </a>

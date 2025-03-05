@@ -35,17 +35,19 @@ const AboutProduct = () => {
   }, []);
 
   return (
-    <div id="aboutProducts" className="p-6 bg-yellow-100 h-auto lg:h-[90vh] flex justify-center items-center">
+    <div id="aboutProducts" 
+    className="p-6 bg-yellow-100 h-auto lg:h-[90vh] flex justify-center items-center"
+    >
     <div ref={ref} className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl">
       
-      {/* Honeycomb Section */}
+      
       <div className="honeycomb-container lg:w-1/2 min-h-[300px] flex justify-center items-center flex-wrap">
         {imageSources.map((src, index) => (
           <Hexagon key={index} index={index} imageSrc={src} />
         ))}
       </div>
   
-      {/* Animated Text Section */}
+    
       <motion.div
         className="lg:w-1/2 p-4"
         initial={{ opacity: 0, y: 50 }}

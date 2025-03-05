@@ -1,12 +1,12 @@
 import React from "react";
 import InstaLogo from "../../../assets/instaLogo.png";
-import XLogo from "../../../assets/xLogo.png";
+// import XLogo from "../../../assets/xLogo.png";
 import FacebookLogo from "../../../assets/facebookLogo.png";
-import TiktokLogo from "../../../assets/tiktokLogo.png";
+// import TiktokLogo from "../../../assets/tiktokLogo.png";
 
 const Contact = () => {
   return (
-    <div id="contactUs" className="bg-yellow-100 p-6 min-h-[70vh] flex flex-col items-center text-center">
+    <div id="contactUs" className="bg-yellow-100 p-6 min-h-[70vh] flex flex-col items-center text-center border">
       <h2 className="text-4xl font-serif tracking-wide text-[#2D1B0F] font-bold mb-6">
         Get in Touch with Us!
       </h2>
@@ -28,13 +28,15 @@ const Contact = () => {
                 className="w-12 h-12 -mt-1 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
             </a>
-            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+
+            {/* <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
               <img 
                 src={XLogo} 
                 alt="Twitter (X)" 
                 className="w-10 h-10 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
-            </a>
+            </a> */}
+
             <a href="https://web.facebook.com/profile.php?id=61573658722495" target="_blank" rel="noopener noreferrer">
               <img 
                 src={FacebookLogo} 
@@ -42,13 +44,14 @@ const Contact = () => {
                 className="w-10 h-10 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
             </a>
-            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+
+            {/* <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
               <img 
                 src={TiktokLogo} 
                 alt="TikTok" 
                 className="w-10 h-10 transition-transform duration-300 hover:scale-110 hover:opacity-80"
               />
-            </a>
+            </a> */}
           </div>
 
           {/* AyekooMart Store Link */}
