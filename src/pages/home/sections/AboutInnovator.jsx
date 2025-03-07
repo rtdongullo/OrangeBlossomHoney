@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import AboutIn from "../../../assets/aboutIn.jpg";
-import ImgAbena from "../../../assets/imgAbena.webp"
+import ImgAbena from "../../../assets/imgAbena.webp";
 import { motion } from "framer-motion";
+import WaterMark from "../../../assets/waterMark.png";
 
 const AboutInnovator = () => {
   const [inView, setInView] = useState(false);
@@ -12,13 +12,12 @@ const AboutInnovator = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting); // Set true when in view, false when out
+        setInView(entry.isIntersecting);
       },
-      { threshold: 0.6 } // Trigger at 60% visibility
+      { threshold: 0.6 }
     );
 
     observer.observe(aboutSection);
-
     return () => observer.disconnect();
   }, []);
 
@@ -32,21 +31,26 @@ const AboutInnovator = () => {
   };
 
   return (
-    <div id="aboutInnovator" className="bg-[#f4f1e7] p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh]">
-      
+    <div
+      id="aboutInnovator"
+      className="relative bg-[#f4f1e7] p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh]"
+    >
+      {/* Watermark */}
+      <img
+        src={WaterMark}
+        alt="Watermark"
+        className="absolute bottom-4 right-4 opacity-80 w-1/5 md:w-1/6 lg:w-1/8 max-w-[150px] min-w-[80px]"
+      />
+
       {/* Image Section */}
       <div className="w-full lg:w-1/2 p-4 flex justify-center items-center">
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"} // Animate in & out on scroll
-          variants={imageVariants}
-        >
+        <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={imageVariants}>
           <div className="w-full sm:w-[300px] md:w-[500px] lg:w-[450px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] 
-        border-4 border-[#2D1B0F] rounded-lg overflow-hidden relative flex justify-center items-center">
-            <img 
-              src={ImgAbena} 
-              alt="About Us Section Image" 
-              className="object-cover w-full h-full hover:scale-110 transition-all duration-300" 
+          border-4 border-[#2D1B0F] rounded-lg overflow-hidden relative flex justify-center items-center">
+            <img
+              src={ImgAbena}
+              alt="About Us Section Image"
+              className="object-cover w-full h-full hover:scale-110 transition-all duration-300"
             />
           </div>
         </motion.div>
@@ -54,14 +58,15 @@ const AboutInnovator = () => {
 
       {/* Text Content Section */}
       <div className="w-full lg:w-1/2 p-4 flex flex-col items-center gap-y-6 sm:gap-y-8 md:gap-y-10 lg:gap-y-6">
-
         {/* Name Card */}
-        <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[85%] text-center">
-          <span className="text-xl md:text-2xl font-serif tracking-wide font-bold text-[#2D1B0F]">Winnie Abena Anhwere Anim</span>
+        <div className="bg-yellow-50 shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[85%] text-center">
+          <span className="text-xl md:text-2xl font-serif tracking-wide font-bold text-[#2D1B0F]">
+            Winnie Abena Anhwere Anim
+          </span>
         </div>
 
         {/* Description Card */}
-        <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[85%]">
+        <div className="bg-yellow-50 shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full sm:w-[90%] md:w-[80%] lg:w-[85%]">
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
             Innovator from Jukwa Efutu, Central Region, addresses the low yields of lemon farms and the lack of Ghanaian-made Orange Blossom Honey.
             Her solution involves deploying beehives to lemon farms for six weeks to enable pollination by bees, increasing lemon yields and producing
@@ -70,7 +75,6 @@ const AboutInnovator = () => {
             the service.
           </p>
         </div>
-
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Navbar = () => {
       
       
       <div className="hidden lg:flex space-x-6">
-        <Link to="home" smooth={true} spy={true} activeClass="active" duration={2500} className="nav-link cursor-pointer text-white font-serif tracking-wide font-bold">Home</Link>
+        <Link to="home" smooth={true} spy={true} activeClass="active" offset={-80} duration={800} className="nav-link cursor-pointer text-white font-serif tracking-wide font-bold">Home</Link>
         <Link to="aboutProducts" smooth={true} spy={true} activeClass="active" duration={2500} className="nav-link cursor-pointer text-white font-serif tracking-wide font-bold">About</Link>
         <Link to="aboutInnovator" smooth={true} spy={true} activeClass="active" duration={2500} className="nav-link cursor-pointer text-white font-serif tracking-wide font-bold">Innovator</Link>
         <Link to="gallery" smooth={true} spy={true} activeClass="active" duration={2500} className="nav-link cursor-pointer text-white font-serif tracking-wide font-bold">Gallery</Link>
