@@ -68,9 +68,9 @@ const AboutProduct = () => {
             About the Products
           </h4>
           <p className="text-lg">
-            Pure, organic honey sourced from lemon farms.
-            Experience the golden touch of nature with every drop. Our honey is ethically harvested, ensuring the highest quality and taste.
-            Each jar is packed with natural nutrients, offering a rich and delightful flavour. Savor the purity of raw honey, just as nature intended.
+            Experience the pure taste of nature with Lifestyle Honey.
+            Your source for premium forest honey with refreshing citrous flavours. Lifestyle honey is sourced sustainably to ensure that the bees and our consumers enjoy good health.
+            Elevate your eating experience with a variety of flavours that lifts the mood and offers value for money. Whether drizzled over breakfast, blended into drinks, or enjoyed by the spoonful, Lifestyle Honey brings you the best of nature in every drop.
           </p>
           <h3 className="text-xl font-serif tracking-wide text-[#2D1B0F] font-bold mt-2 mb-2">
             Discover More

@@ -1,14 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import CombTwo from "../../../assets/combTwo.jpg";
-import CombThree from "../../../assets/combThree.jpg";
-import CombOne from "../../../assets/combOne.jpg";
+import Sachet from "../../../assets/sachet.jpg"
+import FiveKg from "../../../assets/fiveKg.jpg"
+import FourFifty from "../../../assets/fourFifty.jpg"
+import TwoTwenty from "../../../assets/twoTwenty.jpg"
 
 const products = [
-  { id: 1, name: "Organic Honey", price: "₵50", image: CombTwo, description: "Pure and organic honey sourced from nature." },
-  { id: 2, name: "Lemon Flavor Honey", price: "₵65", image: CombOne, description: "Infused with natural lemon essence for a refreshing taste." },
-  { id: 3, name: "Orange Blossom Honey", price: "₵70", image: CombThree, description: "Harvested from citrous blossoms, offering a sweet and tangy flavor." },
-  { id: 4, name: "Organic Honey", price: "₵50", image: CombTwo, description: "Raw and unfiltered, packed with natural nutrients." },
+  { id: 1, name: "Big Pouch 5.5Kg", price: "₵400", image: FiveKg, description: "Pure and organic honey sourced from nature." },
+  { id: 2, name: "Honey 455g", price: "₵45", image: FourFifty, description: "Infused with natural lemon essence for a refreshing taste." },
+  { id: 3, name: "Travel Sachet 65g", price: "₵5", image: Sachet, description: "Harvested from citrous blossoms, offering a sweet and tangy flavor." },
+  { id: 4, name: "Honey 220g", price: "₵12", image: TwoTwenty, description: "Raw and unfiltered, packed with natural nutrients." },
 ];
 
 const cardVariants = {
