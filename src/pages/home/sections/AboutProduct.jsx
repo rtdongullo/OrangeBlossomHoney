@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Hexagon from "../../../components/Hexagon";
-import combOne from "../../../assets/combOne.jpg";
-import combTwo from "../../../assets/combTwo.jpg";
-import combFour from "../../../assets/combFour.jpg";
-import combThree from "../../../assets/combThree.jpg";
+import FourFifty from "../../../assets/fourFifty.jpg";
+import TwoTwenty from "../../../assets/twoTwenty.jpg";
+import FiveKg from "../../../assets/fiveKg.jpg";
+import combOneOriginal from "../../../assets/combOneOriginal.jpg";
 import waterMark2 from "../../../assets/waterMark2.png"; 
 import { FaTree, FaLemon, FaTint, FaCube } from "react-icons/fa";
 
-const imageSources = [combOne, combTwo, combFour, combThree];
+const imageSources = [FourFifty, TwoTwenty, FiveKg, combOneOriginal];
 
 const AboutProduct = () => {
   const [inView, setInView] = useState(false);

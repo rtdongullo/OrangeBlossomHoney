@@ -65,7 +65,7 @@ const Showcase = () => {
               <p className="text-sm text-[#5D4037]">{product.description}</p>
             </div>
             <div className="flex justify-between items-center w-full px-2">
-              <p className="text-green-700 text-lg font-bold"><span className="text-[#5D4037] font-serif tracking-wide font-medium">Price</span> {product.price}</p>
+              <p className="text-green-600 text-lg font-bold"><span className="text-[#5D4037] font-serif tracking-wide font-medium">Price</span> {product.price}</p>
               <a
                 href="https://paystack.shop/lifestyle-honey"
                 target="_blank"

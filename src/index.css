@@ -26,8 +26,8 @@
 
 /* Basic styles for the hexagon shape */
 .hexagon {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   background-color: #f1c40f;
   position: relative;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
