@@ -1,6 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import navLogo from "../assets/navLogo.png";
 import { Link } from "react-scroll";
 

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ImgAbena from "../../../assets/imgAbena.webp";
 import { motion } from "framer-motion";
 import WaterMark from "../../../assets/waterMark.png";
+import { Link } from "react-router-dom";
+import AnnieOriginal from "../../../assets/annieOriginal.jpg"
 
 const AboutInnovator = () => {
   const [inView, setInView] = useState(false);
@@ -33,7 +34,7 @@ const AboutInnovator = () => {
   return (
     <div
       id="aboutInnovator"
-      className="relative bg-[#f4f1e7] p-6 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh]"
+      className="relative bg-[#f4f1e7] p-4 flex flex-col lg:flex-row justify-center items-center align-middle h-auto lg:h-[100vh]"
     >
       {/* Watermark */}
       <img
@@ -45,11 +46,11 @@ const AboutInnovator = () => {
       {/* Image Section */}
       <div className="w-full lg:w-1/2 p-4 flex justify-center items-center">
         <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={imageVariants}>
-          <div className="w-full sm:w-[300px] md:w-[500px] lg:w-[450px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] 
+          <div className="w-full sm:w-[500px] md:w-[500px] lg:w-[450px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[490px] 
           border-4 border-[#2D1B0F] rounded-lg overflow-hidden relative flex justify-center items-center">
             <img
-              src={ImgAbena}
-              alt="About Us Section Image"
+              src={AnnieOriginal}
+              alt="Image of Lifestyle Honey CEO"
               className="object-cover w-full h-full hover:scale-110 transition-all duration-300"
             />
           </div>
@@ -74,6 +75,11 @@ const AboutInnovator = () => {
             affordability for consumers. Revenue from honey sales compensates for the cost of moving the beehives, so farmers do not have to pay for
             the service.
           </p>
+          <Link to="/story">
+            <button className="mt-2 px-4 py-2 bg-[#E8A317] text-[#2D1B0F] font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 hover:scale-105">
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </div>
