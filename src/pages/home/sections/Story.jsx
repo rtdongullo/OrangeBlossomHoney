@@ -16,8 +16,8 @@ const Story = () => {
         <div className="bg-yellow-100 flex flex-col min-h-screen">
             {/* Navbar */}
             <header className="fixed top-0 left-0 w-full bg-[#2D1B0F] z-50 h-[60px] lg:h-[80px] px-4 lg:px-8 flex items-center justify-between shadow-md">
-                <Link to = "/">
-                <img src={NavLogo} alt="Logo" className="h-[40px] lg:h-[50px]" />
+                <Link to="/">
+                    <img src={NavLogo} alt="Logo" className="h-[40px] lg:h-[50px]" />
                 </Link>
                 <a
                     href="https://paystack.shop/lifestyle-honey"
@@ -31,13 +31,6 @@ const Story = () => {
 
             {/* Story Content */}
             <main className="mt-[80px] px-4 sm:px-8 md:px-16 lg:px-40 py-10 max-w-5xl mx-auto">
-                <button
-                    onClick={() => navigate(-1)}
-                    className="mb-6 px-4 py-2 bg-yellow-500 text-[#5D4037] rounded-lg font-medium hover:bg-yellow-600 transition-transform duration-300 hover:scale-105">
-                    <span className='flex flex-row items-center gap-1'><TiArrowBack size={23} />
-                        Back
-                    </span>
-                </button>
                 <h1 className="text-3xl font-serif tracking-wide font-bold mb-6 text-[#5D4037]">The Story Behind Lifestyle Honey 🍯💛</h1>
                 <p className="text-base md:text-lg leading-relaxed text-[#3b2c22] space-y-4">
                     It all started with a personal need. I struggled with terrible acne on my face, chest, and back. After trying different treatments, I learned about the healing power of honey—but not just any honey. I needed raw, unprocessed honey, rich in phytonutrients and enzymes that work with other natural ingredients to heal the skin.
@@ -88,6 +81,18 @@ const Story = () => {
                                 ▶️ Watch on Facebook
                             </a>
                         </p>
+                    </div>
+
+                    {/* Back button positioned to bottom right */}
+                    <div className="flex justify-end mt-4">
+                        <button
+                            onClick={() => navigate(-1)}
+                            className="px-4 py-2 bg-yellow-500 text-[#5D4037] rounded-lg font-medium hover:bg-yellow-600 transition-transform duration-300 hover:scale-105"
+                        >
+                            <span className="flex items-center gap-1">
+                                <TiArrowBack size={20} /> Back
+                            </span>
+                        </button>
                     </div>
                 </section>
             </main>
