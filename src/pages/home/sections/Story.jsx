@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import NavLogo from "../../../assets/navLogo.png";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { Link, useNavigate } from 'react-router-dom';
+import { TiArrowBack } from 'react-icons/ti';
 
 const Story = () => {
     useEffect(() => {
@@ -8,11 +10,15 @@ const Story = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const navigate = useNavigate();
+
     return (
         <div className="bg-yellow-100 flex flex-col min-h-screen">
             {/* Navbar */}
             <header className="fixed top-0 left-0 w-full bg-[#2D1B0F] z-50 h-[60px] lg:h-[80px] px-4 lg:px-8 flex items-center justify-between shadow-md">
+                <Link to = "/">
                 <img src={NavLogo} alt="Logo" className="h-[40px] lg:h-[50px]" />
+                </Link>
                 <a
                     href="https://paystack.shop/lifestyle-honey"
                     target="_blank"
@@ -25,6 +31,13 @@ const Story = () => {
 
             {/* Story Content */}
             <main className="mt-[80px] px-4 sm:px-8 md:px-16 lg:px-40 py-10 max-w-5xl mx-auto">
+                <button
+                    onClick={() => navigate(-1)}
+                    className="mb-6 px-4 py-2 bg-yellow-500 text-[#5D4037] rounded-lg font-medium hover:bg-yellow-600 transition-transform duration-300 hover:scale-105">
+                    <span className='flex flex-row items-center gap-1'><TiArrowBack size={23} />
+                        Back
+                    </span>
+                </button>
                 <h1 className="text-3xl font-serif tracking-wide font-bold mb-6 text-[#5D4037]">The Story Behind Lifestyle Honey 🍯💛</h1>
                 <p className="text-base md:text-lg leading-relaxed text-[#3b2c22] space-y-4">
                     It all started with a personal need. I struggled with terrible acne on my face, chest, and back. After trying different treatments, I learned about the healing power of honey—but not just any honey. I needed raw, unprocessed honey, rich in phytonutrients and enzymes that work with other natural ingredients to heal the skin.
@@ -67,7 +80,14 @@ const Story = () => {
                 <section className="mt-10">
                     <div className="bg-white shadow-lg rounded-lg p-6 text-center border border-yellow-300">
                         <h2 className="text-xl font-semibold mb-4 text-[#5D4037]">Watch How We Harvest Our Honey</h2>
-                        <p className="text-gray-500">video link</p>
+                        <p className="text-gray-500">
+                            <a href="https://www.facebook.com/61573658722495/videos/1721405045136021/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mr-2 text-[#5D4037] " style={{ fontFamily: "cursive" }}>
+                                ▶️ Watch on Facebook
+                            </a>
+                        </p>
                     </div>
                 </section>
             </main>

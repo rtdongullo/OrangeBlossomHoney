@@ -76,9 +76,9 @@ const AboutInnovator = () => {
             the service.
           </p>
           <Link to="/story">
-            {/* <button className="mt-2 px-4 py-2 bg-[#E8A317] text-[#2D1B0F] font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 hover:scale-105">
+            <button className="mt-2 px-4 py-2 bg-[#E8A317] text-[#2D1B0F] font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 hover:scale-105">
               Read More
-            </button> */}
+            </button>
           </Link>
         </div>
       </div>

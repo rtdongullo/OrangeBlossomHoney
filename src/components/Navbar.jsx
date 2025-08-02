@@ -3,11 +3,15 @@ import { Link } from "react-scroll";
 import NavLogo from "../assets/navLogo.png"
 
 const Navbar = () => {
+
+
   return (
     <div className="p-4 lg:p-3 fixed top-0 left-0 w-full flex items-center z-50 bg-[#2D1B0F] h-[60px] lg:h-[80px] justify-between lg:justify-around">
       
       <div className="flex items-center">
+       
         <img src={NavLogo} alt="Logo" className="h-[40px] lg:h-[50px] lg:ml-0 ml-2" />
+        
       </div>
       
       
